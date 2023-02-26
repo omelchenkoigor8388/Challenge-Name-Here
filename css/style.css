@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Inter', sans-serif;
+}
+
+.wrapper {
+}
+
+/*=================== Header =====================*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 150px;
+
+    background-color: hsl(225, 100%, 98%);
+}
+
+.title-text h1 {
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+
+.title-text p {
+    font-weight: 700;
+    margin-top: 0px;
+
+    color: hsl(228, 12%, 44%);
+}
+
+.block {
+    display: none;
+}
+
+
+/*========================= Button =========================*/
+.button {
+    display: flex;
+    align-items: center;
+}
+
+.text-mode {
+    font-weight: 700;
+    padding-right: 20px;
+
+    color: hsl(230, 22%, 74%);
+}
+
+.toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+  
+.toggle-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.switch {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: hsl(230, 22%, 74%);
+    border-radius: 34px;
+    transition: background-color 0.3s;
+}
+
+.switch:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: hsl(230, 17%, 14%);
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+input:checked + .switch {
+    background: linear-gradient( hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+}
+
+input:checked + .switch:before {
+    transform: translateX(26px);
+}
+
+
+/*================== Social-networks =======================*/
+.carts-social-networks {
+    display: flex;
+    justify-content:space-between;
+
+    padding: 50px 150px 0px 150px;
+}
+
+.cart-container {
+    width: 280px;
+}
+
+.facebook-cart,
+.twitter-cart,
+.instagram-cart,
+.youTube-cart {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    width: 100%;
+    height: 100%;
+    border-radius: 11px;
+
+    background-color: hsl(208, 92%, 53%);
+}
+
+.twitter-cart {
+    background-color: hsl(203, 89%, 53%);
+}
+
+.instagram-cart {
+    background: rgb(253,196,104);
+    background: linear-gradient(90deg, rgba(253,196,104,1) 35%, rgba(223,73,150,1) 100%);
+}
+
+.youTube-cart {
+    background-color: hsl(348, 97%, 39%);
+}
+
+.cart {
+    width: 100%;
+    height: 96%;
+    border-radius: 0px 0px 10px 10px;
+    text-align: center;
+
+    background-color: hsl(227, 47%, 96%);
+}
+
+.nickname {
+    padding-top: 15px;
+    font-size: 12px;
+    font-weight: 700;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: hsl(228, 12%, 44%);
+}
+
+.nickname span {
+    margin: 0px 10px;
+}
+
+.cart h1 {
+    font-size: 48px;
+    margin: 0px;
+}
+
+.followers{
+    margin-top: 0px;
+    font-size: 10px;
+    letter-spacing: 5px;
+    font-weight: 500;
+
+    color: hsl(230, 22%, 74%);
+}
+
+.statistics {
+    padding: 15px 0px;
+    font-size: 10px;
+    font-weight: 700;
+
+    color: hsl(163, 72%, 41%);
+}
+
+.last-statistics {
+    color: hsl(356, 69%, 56%);
+}
+
+
+/*====================== Mobile =========================*/
+@media(max-width: 1000px) {
+    .header{
+        display: block;
+        padding: 50px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+
+    .title-text {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+
+    .title-text h1 {
+        margin-bottom: 5px;
+    }
+
+    .button {
+        justify-content: space-between;
+    }
+
+    .carts-social-networks {
+        padding: 0px 50px;
+        display: block;
+    }
+
+    .cart-container{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .cart {
+        height: 90%;
+    }
+
+    .facebook-cart,
+    .twitter-cart,
+    .instagram-cart,
+    .youTube-cart {
+        height: 200px;
+    }
+}
