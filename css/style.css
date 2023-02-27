@@ -1,18 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-:root {
-    White : hsl(0, 0%, 100%);
-    Very-Pale-Blue : hsl(225, 100%, 98%);
-    Light-Grayish-Blue : hsl(227, 47%, 96%);
-    Dark-Grayish-Blue : hsl(228, 12%, 44%);
-    Very-Dark-Blue: hsl(230, 17%, 14%);
-}
-
 body {
     margin: 0px;
     padding: 0px;
     font-family: 'Inter', sans-serif;
 }
+
+body.dark-mode {
+    background-color: hsl(230, 17%, 14%);;
+    color: #fff;
+}
+  
 
 .wrapper {
     position: relative;
@@ -25,6 +23,10 @@ header {
     padding: 20px 100px 100px 100px;
 
     background-color: hsl(225, 100%, 98%);
+}
+
+header.dark-mode-header {
+    background-color: hsl(232, 19%, 15%);;
 }
 
 .title {
@@ -121,6 +123,8 @@ input:checked + .switch:before {
     height: 200px;
 }
 
+
+
 .facebook-cart,
 .twitter-cart,
 .instagram-cart,
@@ -155,6 +159,10 @@ input:checked + .switch:before {
     text-align: center;
 
     background-color: hsl(227, 47%, 96%);
+}
+
+.cart.dark-mode-cart {
+    background-color: hsl(228, 28%, 20%);
 }
 
 .nickname {
@@ -226,6 +234,10 @@ input:checked + .switch:before {
     border-radius: 10px;
 
     background-color: hsl(227, 47%, 96%);
+}
+
+.statics-cart.dark-mode-carts {
+    background-color: hsl(228, 28%, 20%);
 }
 
 .header-cart,
