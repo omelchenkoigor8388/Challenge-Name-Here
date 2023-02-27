@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
+:root {
+    White : hsl(0, 0%, 100%);
+    Very-Pale-Blue : hsl(225, 100%, 98%);
+    Light-Grayish-Blue : hsl(227, 47%, 96%);
+    Dark-Grayish-Blue : hsl(228, 12%, 44%);
+    Very-Dark-Blue: hsl(230, 17%, 14%);
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -7,31 +15,31 @@ body {
 }
 
 .wrapper {
+    position: relative;
 }
 
-/*=================== Header =====================*/
-.header {
+/*========================= Header =========================*/
+header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 50px 150px;
+    padding: 20px 100px 100px 100px;
 
     background-color: hsl(225, 100%, 98%);
 }
 
-.title-text h1 {
-    font-weight: 700;
+.title {
     margin-bottom: 0px;
+    font-weight: 700;
 }
 
-.title-text p {
-    font-weight: 700;
+.number-followers {
     margin-top: 0px;
+    font-weight: 700;
 
     color: hsl(228, 12%, 44%);
 }
 
-.block {
+.container-bar{
     display: none;
 }
 
@@ -95,16 +103,22 @@ input:checked + .switch:before {
 }
 
 
-/*================== Social-networks =======================*/
-.carts-social-networks {
-    display: flex;
-    justify-content:space-between;
-
-    padding: 50px 150px 0px 150px;
+.local-cart {
+    position: relative;
+    top: -50px;
+    padding: 0px 100px;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+
+
+
 .cart-container {
-    width: 280px;
+    height: 200px;
 }
 
 .facebook-cart,
@@ -185,47 +199,98 @@ input:checked + .switch:before {
     color: hsl(356, 69%, 56%);
 }
 
+.overview {
+    padding: 0px 100px;
+    font-size: 16px;
+    font-weight: 500;
 
-/*====================== Mobile =========================*/
-@media(max-width: 1000px) {
-    .header{
+    color: hsl(228, 12%, 44%);
+}
+
+
+.overview-cart {
+    padding: 0px 100px;
+    margin-bottom: 50px;
+}
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+}
+  
+
+
+.statics-cart {
+    padding: 20px;
+    border-radius: 10px;
+
+    background-color: hsl(227, 47%, 96%);
+}
+
+.header-cart,
+.info-cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-cart h1 {
+    font-size: 14px;
+}
+
+.header-cart img {
+    width: 20px;
+    height: 20px;
+}
+  
+.info-cart h1{
+    margin: 0px;
+}
+
+
+/*========================== Mobile =============================*/
+@media(max-width: 816px) {
+    header {
         display: block;
-        padding: 50px;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
-    .title-text {
-        font-size: 12px;
-        margin-bottom: 30px;
-    }
+    .container-bar {
+        display: block;
+        width: 100%;
+        height: 2px;
+        margin: 20px 0px;
 
-    .title-text h1 {
-        margin-bottom: 5px;
+        background-color: hsl(228, 12%, 44%);
     }
 
     .button {
+        display: flex;
         justify-content: space-between;
     }
 
-    .carts-social-networks {
-        padding: 0px 50px;
-        display: block;
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
     }
 
-    .cart-container{
-        width: 100%;
-        margin-bottom: 20px;
+    .local-cart {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+      
+    .overview {
+        text-align: center;
     }
 
-    .cart {
-        height: 90%;
+    .overview-cart {
+        padding: 0px 30px;
     }
-
-    .facebook-cart,
-    .twitter-cart,
-    .instagram-cart,
-    .youTube-cart {
-        height: 200px;
+    
+    .grid-container-2 {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
     }
 }

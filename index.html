@@ -8,93 +8,238 @@
   
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
   <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body>
 
-  <div class="wrapper">
+  <div class="wraper">
+    <!--================================ Header ================================-->
+    <header>
 
-    <!-- Header -->
-    <div class="header">
+      <!-- Text header -->
+      <div class="title-container">
 
-      <div class="title-text">
-        <h1>Social Media Dashboard</h1>
-        <p>Total Followers: 23,004</p>
+        <h1 class="title">
+          Social Media Dashboard
+        </h1>
+        <p class="number-followers">
+          Total Followers: 23,004
+        </p>
+
       </div>
 
-      <div class="block"></div>
+      <div class="container-bar"></div>
 
+      <!-- Button -->
       <div class="button">
+
         <span class="text-mode">Dark Mode</span>
         <label class="toggle-switch">
           <input type="checkbox">
           <span class="switch"></span>
-        </label>        
+        </label>     
+
       </div>
+
+    </header>
+
+    <!--============================= Local-cart ==========================-->
+    <div class="local-cart">
+
+      <div class="grid-container">
+
+        <div class="item">
+          <div class="cart-container">
+            <div class="facebook-cart">
+    
+              <div class="cart">
+                <p class="nickname"><span><img src="/images/icon-facebook.svg" alt=""></span> @nathanf</p>
+                <h1>1987</h1>
+                <p class="followers">FOLLOWERS</p>
+                <p class="statistics"><span><img src="./images/icon-up.svg" alt=""></span> 12 Today</p>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="cart-container">
+            <div class="twitter-cart">
+    
+              <div class="cart">
+                <p class="nickname"><span><img src="/images/icon-twitter.svg" alt=""></span> @nathanf</p>
+                <h1>1044</h1>
+                <p class="followers">FOLLOWERS</p>
+                <p class="statistics"><span><img src="./images/icon-up.svg" alt=""></span> 99 Today</p>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="cart-container">
+            <div class="instagram-cart">
+    
+              <div class="cart">
+                <p class="nickname"><span><img src="/images/icon-instagram.svg" alt=""></span> @realnathanf</p>
+                <h1>11k</h1>
+                <p class="followers">FOLLOWERS</p>
+                <p class="statistics"><span><img src="./images/icon-up.svg" alt=""></span> 1099 Today</p>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="cart-container">
+            <div class="youTube-cart">
+    
+              <div class="cart">
+                <p class="nickname"><span><img src="/images/icon-youtube.svg" alt=""></span> Nathan F.</p>
+                <h1>8239</h1>
+                <p class="followers">SUBSCRIBERS</p>
+                <p class="statistics last-statistics"><span><img src="./images/icon-down.svg" alt=""></span> 144 Today</p>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </div>
+
+    <div class="overview">
+      <h1>Overview - Today</h1>
+    </div>
+
+    <div class="overview-cart">
+
+      <div class="grid-container-2">
+
+        <div class="items">
+          <div class="statics-cart">
+            <div class="header-cart">
+              <h1>Page Views</h1>
+              <img src="./images/icon-facebook.svg" alt="">
+            </div>
+            <div class="info-cart">
+              <h1 class="number">87</h1>
+              <p class="percent"><span><img src="/images/icon-up.svg" alt=""></span> 3%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="statics-cart">
+            <div class="header-cart">
+              <h1>Likes</h1>
+              <img src="./images/icon-facebook.svg" alt="">
+            </div>
+            <div class="info-cart">
+              <h1 class="number">52</h1>
+              <p class="percent"><span><img src="/images/icon-down.svg" alt=""></span> 2%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="statics-cart">
+            <div class="header-cart">
+              <h1>Likes</h1>
+              <img src="./images/icon-instagram.svg" alt="">
+            </div>
+            <div class="info-cart">
+              <h1 class="number">5462</h1>
+              <p class="percent"><span><img src="/images/icon-up.svg" alt=""></span> 2257%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="statics-cart">
+            <div class="header-cart">
+              <h1>Profile Views</h1>
+              <img src="./images/icon-instagram.svg" alt="">
+            </div>
+            <div class="info-cart">
+              <h1 class="number">52k</h1>
+              <p class="percent"><span><img src="/images/icon-up.svg" alt=""></span> 1375%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="statics-cart">
+            <div class="header-cart">
+              <h1>Retweets</h1>
+              <img src="./images/icon-twitter.svg" alt="">
+            </div>
+            <div class="info-cart">
+              <h1 class="number">117</h1>
+              <p class="percent"><span><img src="/images/icon-up.svg" alt=""></span> 303%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="statics-cart">
+            <div class="header-cart">
+              <h1>Likes</h1>
+              <img src="./images/icon-facebook.svg" alt="">
+            </div>
+            <div class="info-cart">
+              <h1 class="number">507</h1>
+              <p class="percent"><span><img src="/images/icon-up.svg" alt=""></span> 553%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="statics-cart">
+            <div class="header-cart">
+              <h1>Likes</h1>
+              <img src="./images/icon-youtube.svg" alt="">
+            </div>
+            <div class="info-cart">
+              <h1 class="number">107</h1>
+              <p class="percent"><span><img src="/images/icon-down.svg" alt=""></span> 19%</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="items">
+          <div class="statics-cart">
+            <div class="header-cart">
+              <h1>Total Views</h1>
+              <img src="./images/icon-youtube.svg" alt="">
+            </div>
+            <div class="info-cart">
+              <h1 class="number">1407</h1>
+              <p class="percent"><span><img src="/images/icon-down.svg" alt=""></span> 12%</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      
 
     </div>
 
-    <!-- Social-networks -->
-    <div class="carts-social-networks">
-      <div class="cart-container">
-        <div class="facebook-cart">
 
-          <div class="cart">
-            <p class="nickname"><span><img src="/images/icon-facebook.svg" alt=""></span> @nathanf</p>
-            <h1>1987</h1>
-            <p class="followers">FOLLOWERS</p>
-            <p class="statistics"><span><img src="./images/icon-up.svg" alt=""></span> 12 Today</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="cart-container">
-        <div class="twitter-cart">
-
-          <div class="cart">
-            <p class="nickname"><span><img src="/images/icon-twitter.svg" alt=""></span> @nathanf</p>
-            <h1>1044</h1>
-            <p class="followers">FOLLOWERS</p>
-            <p class="statistics"><span><img src="./images/icon-up.svg" alt=""></span> 99 Today</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="cart-container">
-        <div class="instagram-cart">
-
-          <div class="cart">
-            <p class="nickname"><span><img src="/images/icon-instagram.svg" alt=""></span> @realnathanf</p>
-            <h1>11k</h1>
-            <p class="followers">FOLLOWERS</p>
-            <p class="statistics"><span><img src="./images/icon-up.svg" alt=""></span> 1099 Today</p>
-          </div>
-
-        </div>
-      </div>
-      <div class="cart-container">
-        <div class="youTube-cart">
-
-          <div class="cart">
-            <p class="nickname"><span><img src="/images/icon-youtube.svg" alt=""></span> Nathan F.</p>
-            <h1>8239</h1>
-            <p class="followers">SUBSCRIBERS</p>
-            <p class="statistics last-statistics"><span><img src="./images/icon-down.svg" alt=""></span> 144 Today</p>
-          </div>
-
-        </div>
-      </div>
-    </div>
 
   </div>
-
-  
   
 <!-- 
-  Overview - Today
+  
 
-  Page Views
+  
   87
   3%
 
@@ -125,6 +270,5 @@
   Total Views
   1407
   12% -->
-  
 </body>
 </html>
